@@ -101,15 +101,22 @@
 
 .nav-actions { display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0; }
 
-@media (max-width: 26rem) {
+/* Compact CTA everywhere the hamburger nav is in play (below the 60rem desktop breakpoint),
+   not just the smallest phones — a mid-range viewport (~420-480px) with the full-size button
+   left just enough room for the wordmark to be borderline, so this removes that gap entirely
+   instead of only patching the extreme narrow end. */
+@media (max-width: 59.99rem) {
   .nav-actions .btn-primary { padding: 0.6rem 0.9rem; font-size: 0.8125rem; }
 }
 
 .nav-toggle {
   display: inline-flex;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
-  padding: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
 }
 .nav-toggle span {
   width: 22px; height: 1.5px;
@@ -129,6 +136,9 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--space-6) var(--container-pad);
+  /* On short/landscape mobile viewports, 7 nav links + padding can exceed the viewport height —
+     without this, links past the bottom edge would be clipped and unreachable. */
+  overflow-y: auto;
   transform: translateY(-100%);
   transition: transform var(--duration-base) var(--ease-calm);
 }

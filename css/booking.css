@@ -1,18 +1,16 @@
-/* Booking page layout */
+/* Booking page layout — centered single column (no sidebar) */
 
 .booking-hero {
   padding-block: var(--space-10) var(--space-6);
-  text-align: left;
+  text-align: center;
 }
-.booking-hero h1 { max-width: 30rem; }
+.booking-hero h1 { max-width: 30rem; margin-inline: auto; }
+.booking-hero > p { margin-inline: auto; }
 
 .booking-layout {
-  display: grid;
-  gap: var(--space-8);
+  display: flex;
+  justify-content: center;
   padding-bottom: var(--space-12);
-}
-@media (min-width: 60rem) {
-  .booking-layout { grid-template-columns: 7fr 5fr; align-items: start; }
 }
 
 .booking-card {
@@ -20,21 +18,9 @@
   border: var(--border-hair);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
+  width: 100%;
+  max-width: 38rem;
 }
-
-.booking-notice {
-  background: var(--bg-alt);
-  border-radius: var(--radius-md);
-  padding: var(--space-4);
-  font-size: var(--fs-body-sm);
-  color: var(--ink);
-}
-.booking-notice h4 { font-family: var(--font-body); font-size: var(--fs-body-sm); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-1); }
-.booking-notice p + p { margin-top: var(--space-2); }
-
-.booking-summary-list { margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--fs-body-sm); }
-.booking-summary-list dt { color: var(--text-secondary); }
-.booking-summary-list dd { font-weight: 600; overflow-wrap: break-word; }
 
 .booking-card, .booking-notice, .modal-panel {
   overflow-wrap: break-word;
