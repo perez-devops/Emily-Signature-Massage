@@ -1,0 +1,75 @@
+/* Design tokens — sourced from .claude/skills/massage-brand-art-direction/references/ */
+:root {
+  /* Color — neutrals (~70% of any composition) */
+  --paper: #F4EEE4;
+  --sand: #DCCFB8;
+  --putty: #C7B9A6;
+  --stone: #8C8175;
+
+  /* Color — ink, used instead of pure black anywhere */
+  --ink: #2E2620;
+
+  /* Color — accents (~10% combined, never large fills) */
+  --sage: #7A8B70;
+  --sage-deep: #62704F;
+  --terracotta: #B9764C;
+  --terracotta-deep: #8F5836;
+
+  /* --stone is decorative/UI only (borders, placeholder textures) — it fails
+     WCAG AA (~3.3:1) against --paper at body-text sizes. Use --text-secondary
+     for any actual secondary/caption copy. */
+  --text-secondary: #6E6459;
+
+  /* Surfaces */
+  --bg: var(--paper);
+  --bg-alt: var(--sand);
+  --border: var(--putty);
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
+
+  --fs-display-xl: clamp(2.75rem, 4.5vw + 1rem, 5.25rem);
+  --fs-display-lg: clamp(2.25rem, 3vw + 1rem, 3.5rem);
+  --fs-display-md: clamp(1.75rem, 2vw + 1rem, 2.5rem);
+  --fs-display-sm: clamp(1.375rem, 1vw + 1rem, 1.75rem);
+  --fs-body-lg: 1.125rem;
+  --fs-body: 1rem;
+  --fs-body-sm: 0.9375rem;
+  --fs-eyebrow: 0.8125rem;
+
+  --lh-display: 1.15;
+  --lh-body: 1.6;
+
+  /* Spacing — 8px base scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-10: 5rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+
+  --container-max: 76rem;
+  --container-pad: clamp(1.25rem, 4vw, 3rem);
+
+  /* Radii — restrained, never pill-shaped */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Shadow — one soft token, used sparingly */
+  --shadow-soft: 0 12px 32px -16px rgba(46, 38, 32, 0.18);
+
+  /* Motion */
+  --ease-calm: cubic-bezier(0.22, 0.61, 0.22, 1);
+  --duration-fast: 200ms;
+  --duration-base: 350ms;
+  --duration-slow: 500ms;
+
+  /* Border weight */
+  --border-hair: 1px solid var(--border);
+}
