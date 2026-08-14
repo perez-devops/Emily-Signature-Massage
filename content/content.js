@@ -75,6 +75,14 @@ window.EMILY_CONTENT = {
       price: "$150 / $200"
     },
     {
+      slug: "nuru-massage",
+      name: "Nuru Massage",
+      description: "A luxurious, full-body relaxation experience using silky massage gel and flowing techniques to ease tension, encourage relaxation, and restore a sense of well-being.",
+      bestFor: "Comfort, relaxation, and whole-body wellness",
+      duration: "60 / 90 min",
+      price: "$150 / $200"
+    },
+    {
       slug: "hot-stone",
       name: "Hot Stone",
       description: "Warmed basalt stones work as an extension of the hands — heat opens tissue that resists pressure alone.",
