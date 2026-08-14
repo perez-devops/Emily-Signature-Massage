@@ -40,7 +40,7 @@ function initBookingForm() {
   services.forEach(function (service) {
     var opt = document.createElement('option');
     opt.value = service.slug;
-    opt.textContent = service.name + ' (' + service.duration + ')';
+    opt.textContent = service.name;
     serviceSelect.appendChild(opt);
   });
 
