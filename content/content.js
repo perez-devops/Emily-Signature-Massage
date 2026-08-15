@@ -178,6 +178,16 @@ window.EMILY_CONTENT = {
         attribution: "Priya K.",
         rating: 4,
         placeholder: true
+      },
+      {
+        quote: "This was exactly what I needed after a busy week. The massage relieved so much tension. I'll definitely return.",
+        attribution: "Mariam H.",
+        rating: 5
+      },
+      {
+        quote: "One of the best massages I've had in a while. I felt completely relaxed by the end of the session. Highly recommended.",
+        attribution: "Stephen G.",
+        rating: 5
       }
     ]
   },
